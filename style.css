@@ -1,0 +1,136 @@
+body,
+h1,
+h2,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: white;
+  width: 80%;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 300px;
+  background-position-x: center;
+  box-shadow: 0 40px 40px rgba(0, 0, 0, 0.4);
+}
+
+.images-container {
+  height: 150px;
+}
+
+.faq-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-mobile-art {
+  position: relative;
+  bottom: 130px;
+  width: 300px;
+}
+
+.faq-box,
+.faq-desktop-art {
+  display: none;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+}
+
+.faq-list {
+  margin: 20px;
+}
+
+.faq-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  padding: 10px;
+}
+
+.faq-list-item h2 {
+  font-weight: 400;
+}
+
+@media only screen and (min-width: 1440px) {
+  main {
+    flex-direction: row;
+    background-image: url("/images/bg-pattern-desktop.svg");
+    background-size: 600px;
+    background-position: -300px center;
+    height: 450px;
+  }
+
+  .images-container,
+  .faq-container {
+    flex: 1;
+  }
+
+  .images-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+  }
+
+  .faq-mobile-art {
+    display: none;
+  }
+
+  .desktop-assets-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .faq-box,
+  .faq-desktop-art {
+    display: block;
+  }
+
+  .faq-box {
+    position: absolute;
+    left: -80px;
+    top: 180px;
+  }
+
+  .faq-desktop-art {
+    object-position: right;
+    object-fit: cover;
+    width: 450px;
+    height: 400px;
+  }
+
+  h1 {
+    text-align: left;
+    padding: 10px;
+  }
+
+  .faq-list {
+    margin: 0 40px 0 0;
+  }
+}
